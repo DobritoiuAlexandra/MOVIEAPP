@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-description {
+    font-size: 24px;
+    font-weight: 700;
+    flex: 1 1 calc(50% - 10px);
+    text-align: left;
+    margin-bottom: 10px;
+    color: white;
+}
+
+/* Stiluri pentru containerul formularului */
+.container-form {
+    background: #1f1e24 url("../images/service-bg.jpg") center/cover no-repeat;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+    flex: 1 1 calc(50% - 10px);
+    margin-left: 20px;
+}
+
+select,
+input {
+    background-color: #1f1e24;
+    border: none !important;
+    outline: none;
+}
+
+label,
+select,
+input,
+button {
+    margin: 10px;
+    width: 95%;
+    text-align: center;
+    color: white;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Stiluri pentru mesaje de eroare și succes */
+.error-message,
+.success-message {
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;
+    display: none;
+}
+
+.error-message {
+    color: #FFFFFF;
+    background-color: #FF4D4D;
+}
+
+.success-message {
+    color: #FFFFFF;
+    background-color: #4CAF50;
+}
+
+
+@media screen and (max-width: 600px) {
+    .container-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-container {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+/* Stiluri pentru ecrane mai mici */
+@media screen and (max-width: 1440px) {
+    .container-form {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container-form {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container-form {
+        padding: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-container {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .container-form {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .container-form {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .container-form {
+        padding: 5px;
+    }
+}

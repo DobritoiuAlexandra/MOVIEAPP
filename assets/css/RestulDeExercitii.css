@@ -1,0 +1,181 @@
+/* Stilurile de bază pentru întregul corp al paginii */
+body {
+    margin: 0; /* Elimină marginile implicite ale paginii */
+    font-family: 'Arial', sans-serif; /* Setează fontul principal */
+    background-color: #282c35; /* Fundal gri închis */
+    color: #fff; /* Text alb */
+    display: flex; /* Utilizează modelul de afișare flex pentru a organiza conținutul */
+    flex-direction: column; /* Așează elementele în coloană */
+    min-height: 100vh; /* Asigură o înălțime minimă a întregii pagini */
+}
+
+/* Stilurile pentru layout folosind tabele */
+.layout-table {
+    width: 100%; /* Lățime 100% a tabelei pentru a ocupa întreaga lățime */
+    border-collapse: collapse; /* Elimină spațiile dintre celulele tabelei */
+    flex: 1; /* Ocupă spațiul disponibil în modelul de afișare flex */
+}
+
+/* Stilurile pentru antet, meniu și subsol */
+.header,
+.nav,
+.footer {
+    background-color: #1f1f1f; /* Fundal gri închis pentru antet, meniu și subsol */
+    color: #fff; /* Text alb */
+    text-align: center; /* Alinează textul în centru */
+    padding: 16px 0; /* Adaugă padding la partea de sus și de jos a antetului, meniului și subsolului */
+    height: 70px; /* Înălțimea fixă a antetului, meniului și subsolului */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Umbră ușoară pentru adâncime */
+}
+
+/* Stilurile pentru meniul de navigare */
+.nav ul {
+    list-style-type: none; /* Elimină stilul implicit al listei */
+    margin: 0; /* Elimină marginile listei */
+    padding: 0; /* Elimină padding-ul listei */
+    overflow: hidden; /* Ascunde orice conținut care depășește limitele containerului */
+}
+
+.nav li {
+    float: left; /* Așază elementele pe orizontală */
+}
+
+.nav a {
+    display: block; /* Face ca legăturile să fie afișate ca blocuri */
+    color: #fff; /* Text alb */
+    text-align: center; /* Alinează textul în centru */
+    padding: 14px 18px; /* Adaugă padding la partea de sus și de jos a fiecărei legături */
+    text-decoration: none; /* Elimină sublinierea implicită a legăturilor */
+    transition: background-color 0.3s; /* Adaugă o tranziție la schimbarea culorii de fundal */
+}
+
+/* Efect de hover pentru elementele de navigare, inclusiv când dropdown-ul este deschis */
+.nav a:hover,
+.dropdown:hover .dropbtn {
+    background-color: #333; /* Culorile de fundal se schimbă la hover */
+}
+
+/* Stilurile pentru meniul drop-down */
+.dropdown {
+    display: inline-block; /* Face meniul drop-down să fie afișat în linie cu celelalte elemente */
+}
+
+.dropbtn {
+    padding: 14px 18px; /* Adaugă padding la partea de sus și de jos a butonului drop-down */
+    font-size: 16px; /* Mărimea fontului pentru butonul drop-down */
+    cursor: pointer; /* Schimbă cursorul la interacțiune */
+    transition: background-color 0.3s; /* Adaugă o tranziție la schimbarea culorii de fundal */
+}
+
+/* Stilurile pentru conținutul drop-down */
+.dropdown-content {
+    display: none; /* Inițial ascuns */
+    position: absolute; /* Poziționare absolută în raport cu primul element părinte cu poziționare relativă/absolută/fixed */
+    background-color: #333; /* Fundal gri închis pentru conținutul drop-down */
+    min-width: 160px; /* Lățimea minimă a conținutului drop-down */
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /* Umbră pentru adâncime */
+    z-index: 1; /* Asigură că conținutul drop-down este afișat peste alte elemente */
+}
+
+.dropdown-content a {
+    color: #fff; /* Text alb pentru legăturile din conținutul drop-down */
+    padding: 12px 18px; /* Adaugă padding la partea de sus și de jos a fiecărei legături */
+    display: block; /* Face legăturile să fie afișate ca blocuri */
+    text-decoration: none; /* Elimină sublinierea implicită a legăturilor */
+    transition: background-color 0.3s; /* Adaugă o tranziție la schimbarea culorii de fundal */
+}
+
+/* Efect de hover pentru elementele din drop-down */
+.dropdown-content a:hover {
+    background-color: #444; /* Culorile de fundal se schimbă la hover */
+}
+
+/* Afișarea drop-down când se face hover pe elementul principal */
+.dropdown:hover .dropdown-content {
+    display: block; /* Afișează conținutul drop-down la hover */
+}
+
+/* Stilurile pentru containerul de filme */
+.movie-container {
+    padding: 20px; /* Adaugă padding la containerul de filme */
+}
+
+/* Stiluri pentru formular */
+form {
+    margin-top: 20px; /* Spațiu între formular și conținutul precedent */
+}
+
+/* Stiluri pentru etichetele formularului */
+label {
+    display: block; /* Face etichetele să fie afișate ca blocuri, una sub alta */
+    margin-bottom: 8px; /* Spațiu între etichete */
+    font-weight: bold; /* Textul etichetelor este bold */
+}
+
+/* Stiluri pentru input-uri și textarea */
+input, textarea, select {
+    width: 100%; /* Lățime de 100% pentru a ocupa întregul container */
+    padding: 10px; /* Spațiu în interiorul input-urilor și textarea-urilor */
+    margin-bottom: 16px; /* Spațiu între input-uri și textarea-uri */
+    border: 1px solid #ccc; /* Bordură subțire de culoare gri pentru un aspect curat */
+    border-radius: 4px; /* Colțuri rotunjite */
+    box-sizing: border-box; /* Include padding-ul și bordura în calculul lățimii */
+}
+
+/* Stiluri pentru butoane */
+button {
+    background-color: #4caf50; /* Culore verde pentru butoane */
+    color: #fff; /* Text alb pe butoane */
+    padding: 12px 20px; /* Spațiu în interiorul butoanelor */
+    border: none; /* Elimină bordura butoanelor */
+    border-radius: 4px; /* Colțuri rotunjite pentru butoane */
+    cursor: pointer; /* Cursor de mână la interacțiune */
+    transition: background-color 0.3s; /* Tranziție pentru schimbarea culorii de fundal */
+}
+
+/* Efect de hover pentru butoane */
+button:hover {
+    background-color: #45a049; /* Culorile de fundal se schimbă la hover */
+}
+
+/* Stiluri pentru dropdown */
+select {
+    padding: 10px; /* Spațiu în interiorul dropdown-ului */
+}
+
+
+/* Stiluri responsive pentru ecrane mici */
+@media screen and (max-width: 600px) {
+    .nav li {
+        float: none; /* Resetează așezarea elementelor la normal pentru ecranele mici */
+        display: block; /* Afișează elementele în blocuri */
+        text-align: center; /* Alinează textul în centru */
+    }
+
+    .dropdown {
+        display: block; /* Afișează meniul drop-down în bloc pe ecranele mici */
+        width: 100%; /* Lățimea de 100% pentru a se potrivi ecranului */
+        text-align: center; /* Alinează textul în centru */
+    }
+
+    .dropdown-content {
+        min-width: 100%; /* Lățimea de 100% pentru a se potrivi ecranului */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Umbră pentru adâncime */
+    }
+
+    .nav a,
+    .dropbtn,
+    .dropdown-content a {
+        padding: 10px; /* Reduc spațiul pentru a se potrivi ecranelor mici */
+    }
+
+    .header,
+    .nav,
+    .footer {
+        padding: 10px 0; /* Reduc padding-ul pentru antet, meniu și subsol */
+    }
+
+    .movie-container {
+        padding: 10px; /* Reduc spațiul pentru containerul de filme */
+    }
+}

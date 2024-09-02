@@ -1,0 +1,128 @@
+/* Stiluri pentru containerul principal al filmelor */
+.movie-container {
+    background: url("../images/top-rated-bg.jpg") center/cover no-repeat;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 10px; /* Adăugat padding pentru a controla spațiile între elemente */
+}
+
+/* Stiluri pentru fiecare element de film */
+.movie-item {
+    box-sizing: border-box;
+    flex: 1 1 25%;
+    text-align: center;
+    padding: 0 10px 20px; /* Modificat pentru a adăuga padding și a reduce spațiul între elemente */
+}
+
+/* Stiluri pentru conținutul filmului */
+.movie-content {
+    padding: 20px;
+    margin-bottom: 2px;
+    text-align: left; /* Alinează textul în stânga */
+    position: relative; /* Adăugat pentru a poziționa movie-overview relativ */
+}
+
+/* Alinează movie-details în stânga și movie-overview-container în centru */
+.movie-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    align-items: flex-start;
+    width: 100%; /* Asigură că movie-details ocupă întreaga lățime */
+}
+
+.movie-title {
+    color: hsl(0, 100%, 100%);
+    /*font-size: 20px;*/
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.movie-release-date {
+    color: hsl(0, 100%, 100%);
+    font-style: italic;
+    /*font-size: 20px;*/
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.movie-overview-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinează în centru */
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.movie-overview {
+    color: hsl(0, 100%, 100%);
+    font-size: 10px;
+    max-height: 50px; /* Schimbă această valoare la înălțimea dorită pentru afișarea inițială */
+    overflow: hidden;
+}
+
+/* Stiluri pentru imaginea filmului */
+.movie-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+    position: relative; /* Adăugat pentru a poziționa pseudo-elementul */
+    transition: box-shadow 0.3s, border-radius 0.3s; /* Adăugat pentru a face tranziția frumoasă */
+    border-radius: 15px;
+}
+
+.movie-image:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Adăugat un pseudo-element pentru a crea un fundal semi-transparent la hover */
+.movie-image:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1); /* Schimbați culoarea și opacitatea după preferințe */
+    border-radius: 15px;
+}
+
+/* Stiluri pentru butonul de cumpărare */
+.buy-button {
+    background-color: #4CAF50;
+    width: 98%;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 8px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+/* Media queries pentru responsivitate */
+@media screen and (max-width: 1200px) {
+    .movie-item {
+        flex: 1 1 calc(33.33% - 20px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .movie-item {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .movie-item {
+        flex: 1 1 calc(100% - 20px);
+    }
+
+    .movie-item:last-child {
+        margin-bottom: 0;
+    }
+}

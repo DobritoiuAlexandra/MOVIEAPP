@@ -1,0 +1,76 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1f1e24;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Asigură că întreaga înălțime a paginii este acoperită */
+    flex-direction: column; /* Plasează conținutul într-o coloană */
+}
+
+.container {
+    text-align: center;
+    width: 350px;
+    margin: auto; /* Auto pentru a centra pe ambele axe */
+    background-color: #f0eeee;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+label, input, button {
+    margin: 10px;
+    width: 95%;
+}
+
+a:link, a:visited {
+    color: #008000; /* Verde pentru starea de nevizitat și de vizitat */
+    text-decoration: none; /* Elimină sublinierea */
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.link:hover {
+    color: #4CAF50;
+}

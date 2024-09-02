@@ -1,0 +1,19 @@
+/* Stiluri pentru footer */
+footer {
+    margin-top: auto;
+    background: url("../images/footer-bg.jpg") center/cover no-repeat #1f1e24;
+    padding: 25px 50px;
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Adaugă această linie pentru a extinde pe toată lățimea */
+}
+
+footer p {
+    margin: 0;
+}

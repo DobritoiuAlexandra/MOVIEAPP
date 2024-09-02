@@ -1,0 +1,159 @@
+/* Stiluri pentru header */
+.header {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #1f1e24 url("../images/footer-bg.jpg") center/cover no-repeat;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.close-btn {
+    display: none;
+    cursor: pointer;
+    margin-left: auto; /* Push close-btn to the right */
+    color: #fff;
+    background: hsl(9, 89%, 44%);
+    padding: 10px 20px;
+    border: 2px solid #1f1e24; /* Adăugați o bordură de 2px solid cu culoarea #1f1e24 */
+    border-radius: 5px;
+    font-size: 20px;
+    position: relative;
+    align-self: flex-end;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.close-btn:hover {
+    background-color: hsl(9, 89%, 44%);
+    color: #fff;
+}
+
+.menu-open-btn {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    background: none;
+    border: none;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+}
+
+.navbar-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center the navbar-list horizontally */
+    align-items: center; /* Align items vertically */
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.navbar-link:hover {
+    color: #28a745;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Push header-actions to the right */
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: hsl(9, 89%, 44%);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #1f1e24;
+    color: hsl(9, 89%, 44%);
+    border: 2px solid hsl(9, 89%, 44%);
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: hsl(9, 89%, 44%);
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        padding: 10px;
+    }
+
+    .navbar.active {
+        background-color: #1f1e24;
+        display: flex;
+        height: 100vh;
+        z-index: 1000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .menu-open-btn {
+        display: block;
+        order: -1;
+        margin-right: 10px;
+    }
+
+    .header-actions {
+        margin-left: 0;
+    }
+
+    .navbar-list {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .navbar-link {
+        margin: 5px 0;
+    }
+
+    .close-btn {
+        display: block !important;
+    }
+
+    .close-btn:hover {
+        background-color: #1f1e24;
+        color: #28a745;
+    }
+}
